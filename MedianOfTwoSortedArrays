@@ -1,0 +1,10 @@
+class Solution(object):
+  def findMedianOfTwoArrays(self, nums1, nums2):
+    for char in nums2:
+      nums1.append(char)
+    nums1.sort()
+    length=len(nums1)
+    if length%2==0:
+      return (float(nums1[length/2-1])+ float(nums1[length/2]))/2.0
+    else:
+      return float(nums1[length/2])
